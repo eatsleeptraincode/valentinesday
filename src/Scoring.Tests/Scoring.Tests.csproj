@@ -75,10 +75,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Scoring.IntegrationTests\Scoring.IntegrationTests.csproj">
-      <Project>{091594BE-8566-4EA3-AB2C-94873A0222A5}</Project>
-      <Name>Scoring.IntegrationTests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Scoring.Web\Scoring.Web.csproj">
       <Project>{12D3A0E4-F28F-461B-9873-1DA9B7E54687}</Project>
       <Name>Scoring.Web</Name>
