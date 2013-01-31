@@ -1,0 +1,4 @@
+﻿<viewdata model="Scoring.Web.Actions.Scores.LeaderBoardViewModel"/>
+
+
+<SingleBoard events="Model.Events" scores="Model.Scores"/>

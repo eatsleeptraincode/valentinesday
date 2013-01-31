@@ -1,0 +1,4 @@
+﻿<viewdata model="Scoring.Web.Actions.Admin.OperationsViewModel"/>
+
+<link to="CreateAthleteRequest" text="New Team"/>
+<link to="CreateEventRequest" text="New Event"/>

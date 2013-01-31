@@ -1,0 +1,38 @@
+﻿<viewdata model="Scoring.Web.Actions.Events.EventListViewModel"/>
+
+<h2>
+  Event Schedule
+</h2>
+<br/>
+
+<for each="var e in Model.Events">
+  
+  <div class="row">
+    <br/>
+
+    <div class="span2">
+      <p></p>
+    </div>
+
+      <div class="span2">
+      <h3>${e.Start.ToShortTimeString()}</h3>
+    </div>
+
+    <div class="span3 whitelink">
+      <h3>
+        ${this.LinkTo(new EventDetailsRequest {EventId = e.Id}).Text(e.Name)}
+        ${this.LinkTo(new EditEventRequest {EventId = e.Id}).Text("Edit").AddClass("btn btn-warning").Attr("name","Edit" + e.Name)}
+        ${this.LinkTo(new DeleteEventRequest {EventId = e.Id}).Text("Delete").AddClass("btn btn-danger").Attr("name","Delete" + e.Name)}
+      </h3>
+    </div>
+
+    <div class="span3">
+      <h4>${e.Description}</h4>
+    </div>
+
+    <div class="span2">
+      <p></p>
+    </div>
+  </div>
+</for>
+  

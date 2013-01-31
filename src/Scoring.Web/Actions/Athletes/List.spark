@@ -1,0 +1,19 @@
+﻿<viewdata model="Scoring.Web.Actions.Athletes.AthleteListViewModel"/>
+
+<div class="row">
+  <h2>Competitors</h2>
+</div>
+
+<div class="row">
+
+  <ul>
+    <li each="var a in Model.Athletes.OrderBy(a => a.Name)">
+      <br/>
+      <span class="whitelink">
+        ${this.LinkTo(new AthleteDetailsRequest{AthleteId = a.Id}).Text(a.Name)}
+        ${this.LinkTo(new DeleteAthleteRequest{AthleteId = a.Id}).Text("Delete").AddClass("btn btn-danger").Attr("name","Delete" + a.Name)}
+      </span>
+    </li>
+  </ul>
+
+</div>

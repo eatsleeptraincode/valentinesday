@@ -1,0 +1,25 @@
+﻿<viewdata model="Scoring.Web.Actions.Events.EventDetailsViewModel"/>
+
+<div class="row">
+  <h2>${this.DisplayFor(m => m.Event.Name)} - ${this.DisplayFor(m => m.Event.Start)}</h2>
+  <br/>
+  <h3>${this.DisplayFor(m => m.Event.Description)}</h3>
+  <br/>
+</div>
+
+<div class="row">
+  <div class="span2">
+    <p></p>
+  </div>
+    <div class="span8">
+  <ol>
+    <li each="var s in Model.Scores.OrderBy(score => score.Place).ThenBy(score => score.Athlete.Name)">
+      ${this.LinkTo(new AthleteDetailsRequest{AthleteId = s.Athlete.Id}).Text(s.Athlete.Name).AddClass("whitelink")} (<test if="Model.Event.ScoreType == ScoreType.Time">${this.DisplayFor(s, sc => sc.Time)}</test><test if="Model.Event.ScoreType == ScoreType.Reps">${s.Reps}</test>)  ${this.LinkTo(new LogScoreRequest{AthleteId = s.Athlete.Id, EventId = Model.Event.Id}).Text("Log Score")}
+      <p></p>
+    </li>
+  </ol>
+  </div>
+  <div class="span2">
+    <p></p>
+  </div>
+</div>
