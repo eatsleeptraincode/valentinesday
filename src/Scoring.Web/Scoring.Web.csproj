@@ -85,17 +85,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\images\204im.jpg" />
+    <Content Include="Content\images\204im.png" />
     <Content Include="Content\images\204mc.jpg" />
-    <Content Include="Content\images\204s.jpg" />
+    <Content Include="Content\images\204s.png" />
     <Content Include="Content\images\CrossFit204ClassicLogo.png" />
     <Content Include="Content\images\ktown.jpg" />
     <Content Include="Content\images\militant.jpg" />
     <Content Include="Content\images\prairie.jpg" />
-    <Content Include="Content\images\prairie2.jpg" />
+    <Content Include="Content\images\prairie2.png" />
     <Content Include="Content\images\rocked.jpg" />
-    <Content Include="Content\images\ShopGym.jpg" />
-    <Content Include="Content\images\sublime.jpg" />
+    <Content Include="Content\images\ShopGym.png" />
+    <Content Include="Content\images\sublime.png" />
     <Content Include="Content\images\undefeated.jpg" />
     <Content Include="Content\images\winnipeg.png" />
     <Content Include="Content\scripts\jquery-1.7.2.min.js" />
