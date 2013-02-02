@@ -1,25 +1,33 @@
 ﻿<viewdata model="Scoring.Web.Actions.Athletes.AthleteListViewModel"/>
 
 <div class="row">
-  <h2>Competitors</h2>
+  <h2>Teams</h2>
 </div>
 
 <div class="row">
-  <div class="span4">
+  <div class="span2">
     <p/>
   </div>
 
     <div class="span5">
+    <table id="teams" class="tablesorter scoreboarditem">
+      <tr each="var a in Model.Athletes.OrderBy(a => a.Name).Take(6)">
+        <td>${this.ImageFor(a.Image).Attr("height", 50).Attr("width", 50)}</td>
+        <td class="whitelink">${this.LinkTo(new AthleteDetailsRequest{AthleteId = a.Id}).Text(a.Name)}</td>
+        <td>${this.LinkTo(new DeleteAthleteRequest{AthleteId = a.Id}).Text("Delete").AddClass("btn btn-danger").Attr("name","Delete" + a.Name)}</td>
+      </tr>
+    </table>
+  </div>
+
+    <div class="span5">
   <table id="teams" class="tablesorter scoreboarditem">
-    <tr each="var a in Model.Athletes.OrderBy(a => a.Name)">
+    <tr each="var a in Model.Athletes.OrderBy(a => a.Name).Skip(6)">
         <td>${this.ImageFor(a.Image).Attr("height", 50).Attr("width", 50)}</td>
         <td class="whitelink">${this.LinkTo(new AthleteDetailsRequest{AthleteId = a.Id}).Text(a.Name)}</td>
         <td>${this.LinkTo(new DeleteAthleteRequest{AthleteId = a.Id}).Text("Delete").AddClass("btn btn-danger").Attr("name","Delete" + a.Name)}</td>
     </tr>
   </table>
   </div>
-  <div class="span3">
-    <p/>
-  </div>
+
 
 </div>

@@ -10,10 +10,11 @@
   <body>
     <div class="container">
 	  <div class="row">
-	    <div class="span2">
-		  <img src="/Content/images/CrossFit204ClassicLogo.png" height="75" width="100">  
+		<div class="span2">
+			${this.ImageFor("CrossFit204ClassicLogo.png").Attr("height", 75).Attr("width", 100)}
 		</div>
 		<div class="span8">
+
 		  <h1>
 			<link to="LeaderBoardRequest" text="Valentine's Day Massacre">
 		  </h1>
@@ -33,6 +34,8 @@
 		  <link to="EventListRequest" text="Events">
 	  </nav>
 	  </div>
+	  <br/>
+	  <br/>
       <use content="view"/>
     </div>
   </body>

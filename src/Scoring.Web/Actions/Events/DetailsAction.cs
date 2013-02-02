@@ -33,6 +33,7 @@ namespace Scoring.Web.Actions.Events
                     display.Time = score.Time;
                     display.Reps = score.Reps;
                     display.ScoredPlace = score.ScoredPlace;
+                    display.Weight = score.Weight;
                 }
                 else
                 {

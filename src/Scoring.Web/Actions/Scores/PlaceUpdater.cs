@@ -30,6 +30,7 @@ namespace Scoring.Web.Actions.Scores
                     orderedScore.Time.Minutes == previousScore.Time.Minutes
                     && orderedScore.Time.Seconds == previousScore.Time.Seconds
                     && orderedScore.Reps == previousScore.Reps
+                    && orderedScore.Weight == previousScore.Weight
                     && orderedScore.ScoredPlace == previousScore.ScoredPlace)
                     orderedScore.Place = previousScore.Place;
                 else
@@ -53,6 +54,7 @@ namespace Scoring.Web.Actions.Scores
                 .OrderBy(s => s.Time.Minutes)
                 .ThenBy(s => s.Time.Seconds)
                 .ThenByDescending(s => s.Reps)
+                .ThenByDescending(s => s.Weight)
                 .ThenBy(s => s.ScoredPlace)
                 .ToList();
             return orderedScores;

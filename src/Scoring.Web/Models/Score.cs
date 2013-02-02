@@ -15,6 +15,7 @@
         public int? Place { get; set; }
         public int ScoredPlace { get; set; }
         public int Reps { get; set; }
+        public int Weight { get; set; }
         public Time Time { get; set; }
     }
 

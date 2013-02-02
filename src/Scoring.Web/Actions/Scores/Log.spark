@@ -12,6 +12,10 @@
     <edit property="Score.Reps"/>
   </test>
 
+  <test if="Model.Event.ScoreType == ScoreType.Weight">
+    <edit property="Score.Weight"/>
+  </test>
+
   <test if="Model.Event.ScoreType == ScoreType.Place">
     <edit property="Score.ScoredPlace"/>
   </test>

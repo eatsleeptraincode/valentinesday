@@ -23,6 +23,7 @@
     <td>
       <test if="s.ScoreType == ScoreType.Time">${this.DisplayFor(s, score => score.Time)}</test>
       <test if="s.ScoreType == ScoreType.Reps">${s.Reps}</test>
+      <test if="s.ScoreType == ScoreType.Weight">${s.Weight}</test>
       <test if="s.ScoreType == ScoreType.Place">${s.ScoredPlace}</test>
     </td>
   </tr>

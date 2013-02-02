@@ -16,6 +16,7 @@ namespace Scoring.Web.Models
     {
         Time,
         Reps,
-        Place
+        Place,
+        Weight
     }
 }

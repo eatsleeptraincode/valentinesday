@@ -16,6 +16,7 @@ namespace Scoring.Web.Indexes
                               score.AthleteId,
                               score.Time,
                               score.Reps,
+                              score.Weight,
                               score.ScoredPlace,
                               score.Place,
                               score.ScoreType
@@ -33,6 +34,7 @@ namespace Scoring.Web.Indexes
                                           score.AthleteId,
                                           score.Time,
                                           score.Reps,
+                                          score.Weight,
                                           score.ScoredPlace,
                                           score.Place,
                                           score.ScoreType
