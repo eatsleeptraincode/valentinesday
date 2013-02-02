@@ -74,6 +74,10 @@ th {
     background-color: #070000;
 }
 
+#logo {
+    padding-top: 1em;
+}
+
 th.columnheader {
     width: 10em;
 }
