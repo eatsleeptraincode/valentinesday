@@ -1,4 +1,6 @@
 ﻿<viewdata model="Scoring.Web.Actions.Athletes.AthleteDetailsViewModel"/>
+<br/>
+<br/>
 
 <div class="row">
 <h2>${this.DisplayFor(a => a.Athlete.Name)}</h2>
