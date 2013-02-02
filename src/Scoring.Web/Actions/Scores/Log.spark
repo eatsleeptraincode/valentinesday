@@ -11,6 +11,10 @@
   <test if="Model.Event.ScoreType == ScoreType.Reps">
     <edit property="Score.Reps"/>
   </test>
+
+  <test if="Model.Event.ScoreType == ScoreType.Place">
+    <edit property="Score.ScoredPlace"/>
+  </test>
   
   ${this.InputFor(m => m.Athlete.Id)}
   ${this.InputFor(m => m.Event.Id)}

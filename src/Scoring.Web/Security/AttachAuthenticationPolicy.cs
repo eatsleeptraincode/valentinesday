@@ -14,7 +14,8 @@ namespace Scoring.Web.Security
                 .Where(chain => chain.InputType() != null)
                 .Where(chain => chain.InputType() == typeof (LogScoreRequest)
                                 || chain.InputType().Name.Contains("Delete")
-                                || chain.InputType().Name.Contains("Create"))
+                                || chain.InputType().Name.Contains("Create")
+                                || chain.InputType().Name.Contains("Edit"))
                 .Each(chain => chain
                                    .Authorization
                                    .AddPolicy(typeof (AuthenticationPolicy)));

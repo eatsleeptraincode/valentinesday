@@ -8,6 +8,7 @@
       
       <thead>
         <tr>
+          <th>Image</th>
           <th class="columnheader">Name</th>
           <th each="var e in events">
             ${e.Name}
@@ -18,6 +19,9 @@
   
       <tbody>
         <tr each="var s in scores.OrderBy(s => s.Total)">
+          <td>
+            ${this.ImageFor(s.Athlete.Image).Attr("height", 50).Attr("width", 50)}
+          </td>
           <td>${this.LinkTo(new AthleteDetailsRequest{AthleteId = s.Athlete.Id}).Text(s.Athlete.Name).AddClass("whitelink")}</td>
           <td each="var p in s.Place">
             ${p.Item2}

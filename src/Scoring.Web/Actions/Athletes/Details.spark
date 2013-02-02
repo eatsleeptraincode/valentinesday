@@ -4,9 +4,50 @@
 <h2>${this.DisplayFor(a => a.Athlete.Name)}</h2>
 </div>
 <br/>
-<for each="var s in Model.Scores">
-  <div class="row">
-    <br/>
-    ${this.LinkTo(new EventDetailsRequest{EventId = s.Event.Id}).Text(s.Event.Name).AddClass("whitelink")}:  ${s.Place} (<test if="s.ScoreType == ScoreType.Time">${this.DisplayFor(s, score => score.Time)}</test><test if="s.ScoreType == ScoreType.Reps">${s.Reps}</test>)
+<div class="row">
+  <div class="span2">
+    <p/>
   </div>
-</for>
+<div class="span3">
+  <table>
+    <thead>
+      <tr>
+      <th>Event</th>
+      <th>Place</th>
+      <th>Score</th>
+      </tr>
+    </thead>
+  <tr each="var s in Model.Scores">
+    <td>${this.LinkTo(new EventDetailsRequest{EventId = s.Event.Id}).Text(s.Event.Name).AddClass("whitelink")}</td>
+    <td>${s.Place}</td>
+    <td>
+      <test if="s.ScoreType == ScoreType.Time">${this.DisplayFor(s, score => score.Time)}</test>
+      <test if="s.ScoreType == ScoreType.Reps">${s.Reps}</test>
+      <test if="s.ScoreType == ScoreType.Place">${s.ScoredPlace}</test>
+    </td>
+  </tr>
+  </table>
+
+</div>
+  <div class="span2">
+    <p/>
+  </div>
+
+<div class="span3">
+  <table>
+    <thead>
+      <tr>
+        <th>Members</th>
+      </tr>
+    </thead>
+    <tr each="var m in Model.Athlete.Members">
+      <td>
+        ${m}
+      </td>  
+    </tr>
+  </table>
+</div>
+</div>
+<div class="span2">
+  <p/>
+</div>

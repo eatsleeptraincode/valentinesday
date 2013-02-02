@@ -5,15 +5,21 @@
 </div>
 
 <div class="row">
+  <div class="span4">
+    <p/>
+  </div>
 
-  <ul>
-    <li each="var a in Model.Athletes.OrderBy(a => a.Name)">
-      <br/>
-      <span class="whitelink">
-        ${this.LinkTo(new AthleteDetailsRequest{AthleteId = a.Id}).Text(a.Name)}
-        ${this.LinkTo(new DeleteAthleteRequest{AthleteId = a.Id}).Text("Delete").AddClass("btn btn-danger").Attr("name","Delete" + a.Name)}
-      </span>
-    </li>
-  </ul>
+    <div class="span5">
+  <table id="teams" class="tablesorter scoreboarditem">
+    <tr each="var a in Model.Athletes.OrderBy(a => a.Name)">
+        <td>${this.ImageFor(a.Image).Attr("height", 50).Attr("width", 50)}</td>
+        <td class="whitelink">${this.LinkTo(new AthleteDetailsRequest{AthleteId = a.Id}).Text(a.Name)}</td>
+        <td>${this.LinkTo(new DeleteAthleteRequest{AthleteId = a.Id}).Text("Delete").AddClass("btn btn-danger").Attr("name","Delete" + a.Name)}</td>
+    </tr>
+  </table>
+  </div>
+  <div class="span3">
+    <p/>
+  </div>
 
 </div>

@@ -38,6 +38,7 @@ namespace Scoring.Web.Actions.Scores
 
             score.Reps = request.Score.Reps;
             score.Time = request.Score.Time;
+            score.Place = request.Score.Place;
 
             session.Store(score);
             session.SaveChanges();
@@ -71,6 +72,7 @@ namespace Scoring.Web.Actions.Scores
                                 .OrderBy(s => s.Time.Minutes)
                                 .ThenBy(s => s.Time.Seconds)
                                 .ThenByDescending(s => s.Reps)
+                                .ThenBy(s => s.ScoredPlace)
                                 .ToList();
 
             if (theEvent.Reverse)
@@ -85,7 +87,8 @@ namespace Scoring.Web.Actions.Scores
                 if (previousScore != null &&
                     orderedScore.Time.Minutes == previousScore.Time.Minutes
                     && orderedScore.Time.Seconds == previousScore.Time.Seconds
-                    && orderedScore.Reps == previousScore.Reps)
+                    && orderedScore.Reps == previousScore.Reps
+                    && orderedScore.ScoredPlace == previousScore.ScoredPlace)
                     orderedScore.Place = previousScore.Place;
                 else
                     orderedScore.Place = i;

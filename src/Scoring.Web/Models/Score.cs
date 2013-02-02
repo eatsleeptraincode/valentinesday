@@ -13,6 +13,7 @@
         public ScoreType ScoreType { get; set; }
 
         public int? Place { get; set; }
+        public int ScoredPlace { get; set; }
         public int Reps { get; set; }
         public Time Time { get; set; }
     }

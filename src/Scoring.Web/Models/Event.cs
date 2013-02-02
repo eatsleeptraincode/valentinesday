@@ -15,6 +15,7 @@ namespace Scoring.Web.Models
     public enum ScoreType
     {
         Time,
-        Reps
+        Reps,
+        Place
     }
 }
