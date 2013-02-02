@@ -1,4 +1,6 @@
 ﻿<viewdata model="Scoring.Web.Actions.Scores.LogScoreViewModel"/>
+<br/>
+<br/>
 
 <h3>${Model.Athlete.Name}'s Score for ${Model.Event.Name}</h3>
 <br/>

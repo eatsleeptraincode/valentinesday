@@ -1,4 +1,6 @@
 ﻿<viewdata model="Scoring.Web.Actions.Athletes.AthleteListViewModel"/>
+<br/>
+<br/>
 
 <div class="row">
   <h2>Teams</h2>

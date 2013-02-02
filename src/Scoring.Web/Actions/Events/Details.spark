@@ -1,4 +1,6 @@
 ﻿<viewdata model="Scoring.Web.Actions.Events.EventDetailsViewModel"/>
+<br/>
+<br/>
 
 <div class="row">
     <h2>${this.DisplayFor(m => m.Event.Name)} - ${this.DisplayFor(m => m.Event.Start)}</h2>
